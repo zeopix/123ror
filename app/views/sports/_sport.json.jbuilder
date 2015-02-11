@@ -1,0 +1,1 @@
+json.(sport, :id, :title)
