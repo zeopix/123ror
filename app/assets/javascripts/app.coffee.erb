@@ -1,0 +1,36 @@
+betvictor = angular.module 'betvictor',[
+  'templates',
+  'ngRoute',
+  'ngResource',
+  'controllers',
+  'factories',
+  'filters',
+  'pascalprecht.translate'
+  ]
+
+betvictor.config ['$routeProvider','$httpProvider','$translateProvider', ($routeProvider,$httpProvider,$translateProvider)->
+    #spin loader interceptor
+    $httpProvider.interceptors.push 'myHttpInterceptor'
+
+    #client routing
+    $routeProvider
+      .when '/sports',
+        templateUrl: "index.html"
+        controller: 'SportsController'
+      .when '/sports/:sportId',
+        templateUrl: "show.html"
+        controller: 'SportsController'
+      .when '/sports/:sportId/events/:eventId',
+        templateUrl: "event.html"
+        controller: 'SportsController'
+      .otherwise "/sports"
+
+      #translation support
+      $translateProvider.useStaticFilesLoader
+        prefix: 'translations/',
+        suffix: '.json'
+
+      $translateProvider.preferredLanguage window.locale
+      # null
+
+]

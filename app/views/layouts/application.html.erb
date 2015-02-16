@@ -2,14 +2,24 @@
 <html>
 <head>
   <title>Betvictor</title>
+  <script>
+  window.locale = '<%= I18n.locale %>'
+  </script>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 <div class="container">
   <div class="header">
     <%= image_tag "logo.png" %>
+    <ul class="nav navbar-nav navbar-right">
+      <% I18n.t('locales').each do |locale| %>
+      <li<% if I18n.locale == locale[0] %> class="active"<% end %>><a href="/?locale=<%= locale[0] %>"><%= locale[1] %></a></li>
+      <% end %>
+
+    </ul>
   </div>
 </div>
 <hr>

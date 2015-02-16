@@ -10,7 +10,7 @@ describe "SportsController", ->
   # access injected service later
   httpBackend  = null
 
-  setupController = (id=false)->
+  setupController = (sportId=false,eventId)->
     inject(($location, $routeParams, $rootScope, $resource, $httpBackend, $controller,$http)->
       scope       = $rootScope.$new()
       location    = $location
@@ -19,8 +19,10 @@ describe "SportsController", ->
       httpBackend = $httpBackend
       http = $http
       controllerService = $controller
-      if id != false
-        routeParams.id = id
+      if sportId != false
+        routeParams.sportId = sportId
+      if eventId != false
+        routeParams.eventId = eventId
       httpBackend.expectGET(new RegExp("sports")).respond(200,sports)
       ctrl = $controller "SportsController",
                 $scope: scope,
@@ -47,3 +49,9 @@ describe "SportsController", ->
       it 'load sport', ->
         setupController(100)
         expect(scope.sport.id).toBe(100)
+  describe 'event show', ->
+    describe 'controller initialization', ->
+      it 'load event', ->
+        setupController(100,248849910)
+        expect(scope.sportEvent.id).toBe(248849910)
+

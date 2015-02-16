@@ -17,4 +17,5 @@
 //= require angular-rails-templates
 //= require_tree .
 //= require angular-resource/angular-resource
-
+//= require angular-translate/angular-translate
+//= require angular-translate-loader-static-files/angular-translate-loader-static-files
