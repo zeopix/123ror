@@ -6,7 +6,7 @@ describe "SportsController", ->
   routeParams  = null
   http     = null
   controllerService = null
-  sports = sports: fixture.load('sports.json', true)
+  sports = sports: fixture.load('sports.json')[0]
   # access injected service later
   httpBackend  = null
 
@@ -37,7 +37,7 @@ describe "SportsController", ->
     describe 'controller initialization', ->
       it 'load no sport', ->
         setupController()
-        expect(typeof(scope.sport)).toBe(false)
+        expect(scope.sport).toBe(false)
     describe 'controller initialization', ->
       it 'load sports', ->
         setupController()
@@ -45,8 +45,5 @@ describe "SportsController", ->
   describe 'sport show', ->
     describe 'controller initialization', ->
       it 'load sport', ->
-        setupController(2)
-        expect(scope.sport.id).toBe(2)
-    describe 'controller initialization', ->
-      it 'load sports', ->
-        expect(scope.sports).toEqualData(sports.sports)
+        setupController(100)
+        expect(scope.sport.id).toBe(100)

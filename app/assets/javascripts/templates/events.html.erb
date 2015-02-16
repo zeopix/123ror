@@ -1,8 +1,13 @@
 <section class="row" ng-if="sports">
-  <h1 class="text-center h2">Eventos</h1>
   <div class="row">
-    <div class="well col-sm-6">
-        <h1 class="h3 col-md-6" style="margin-top: 0"><a href="#">{{sport.title}}</a></h1>
-    </div>
+  <h1 class="h3 col-md-6"><a href="#">{{sport.title}}</a></h1>
+  </div>
+  <div class="row">
+
+    <a class="well col-sm-6" ng-repeat="event in sport.events" href="#/sports/{{sport.id}}/events/{{event.id}}">
+          <h2>{{event.title}}</h2>
+          <h4>{{event.meeting}}</h4>
+          <span class="score">{{event.score}}</span>
+    </a>
   </div>
 </section>
