@@ -17,9 +17,6 @@ describe SportsController do
       it 'should return results' do
         expect(results.sports.size).to gt(0)
       end
-      it "should include 'tal/ Cheese'" do
-        #expect(results.map(&extract_name)).to include('Baked Potato w/ Cheese')
-      end
     end
 
 
