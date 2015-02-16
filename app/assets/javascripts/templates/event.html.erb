@@ -11,7 +11,7 @@
   </div>
   <div class="row" ng-show="event.outcomes.length > 0">
 
-    <div class="well col-sm-4" ng-repeat="outcome in event.outcomes">
+    <div class="well col-sm-4" ng-repeat="outcome in event.outcomes | orderBy:-pos:false">
           <h4>{{outcome.description}}</h4>
           <p class="price">{{outcome.price}} ({{outcome.price_decimal}})</p>
     </div>

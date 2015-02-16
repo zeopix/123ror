@@ -11,7 +11,7 @@
 
   <div class="row" ng-show="sport.events.length > 0">
 
-    <a class="well col-sm-6" ng-repeat="event in sport.events" href="#/sports/{{sport.id}}/events/{{event.id}}">
+    <a class="well col-sm-6" ng-repeat="event in sport.events | orderBy:-pos:false" href="#/sports/{{sport.id}}/events/{{event.id}}">
           <h2>{{event.title}}</h2>
           <h4>{{event.meeting}}</h4>
           <span class="score">{{event.score}}</span>
