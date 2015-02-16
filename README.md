@@ -16,6 +16,7 @@ SetUp
   $ cd 123ror
   $ bundle install
   $ rake bower:install
+  $ rails s
 ```
 Run Tests
 ------------------------------
