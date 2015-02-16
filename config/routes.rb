@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'sports/index'
 
   root 'home#index'
   resources :sports, only: [:index]
