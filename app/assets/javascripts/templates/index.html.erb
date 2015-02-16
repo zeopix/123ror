@@ -1,0 +1,8 @@
+<section class="row" ng-if="sports">
+  <h1 class="text-center h2">Deportes</h1>
+  <div class="row">
+    <div ng-repeat="sport in sports | orderBy:-pos:false" class="well col-sm-6">
+        <h1 class="h3 col-md-6" style="margin-top: 0"><a href="#/sports/{{sport.id}}">{{sport.title}}</a></h1>
+    </div>
+  </div>
+</section>

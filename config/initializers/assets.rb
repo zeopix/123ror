@@ -10,3 +10,9 @@ Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bowe
 Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
 Rails.application.config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff|woff2)$)
 Rails.application.config.assets.precompile += %w( bootstrap/glyphicons-halflings-regular.woff2 )
+Rails.application.config.assets.precompile += %w(
+  teaspoon.css
+  teaspoon-teaspoon.js
+  teaspoon-jasmine.js
+)
+Rails.application.config.assets.precompile += %w( jasmine/1.3.1.js )
