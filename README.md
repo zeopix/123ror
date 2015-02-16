@@ -15,7 +15,7 @@ SetUp
   $ git clone https://github.com/zeopix/123ror.git 123ror
   $ cd 123ror
   $ bundle install
-  $ rake bower:install
+  $ rake bower:install #optional, assets bundled
   $ rails s
 ```
 Run Tests
