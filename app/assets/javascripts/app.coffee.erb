@@ -10,7 +10,7 @@ betvictor = angular.module 'betvictor',[
 
 betvictor.config ['$routeProvider','$httpProvider','$translateProvider', ($routeProvider,$httpProvider,$translateProvider)->
     #spin loader interceptor
-    $httpProvider.interceptors.push 'myHttpInterceptor'
+    $httpProvider.interceptors.push 'spinnerHttpInterceptor'
 
     #client routing
     $routeProvider

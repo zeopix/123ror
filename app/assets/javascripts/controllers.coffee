@@ -2,7 +2,7 @@ controllers = angular.module('controllers',[])
 controllers.controller("SportsController", [ '$scope', '$routeParams', '$location','$http','$filter',
   ($scope,$routeParams,$location,$http,$filter)->
     $scope.sports = []
-    $http.get('sports').success((data) ->
+    $http.get('sports',cache:true).success((data) ->
       $scope.sports = data.sports
       if typeof($routeParams.sportId) != "undefined"
         $scope.sport = $filter('getById')($scope.sports,$routeParams.sportId);

@@ -17,6 +17,6 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 
 body { background-color: #333; }
-#spinner { width: 100%; height: 100%; display:block; position: absolute; text-align:center }
+#spinner { width: 100%; height: 100%; display:block; position: absolute; text-align:center; background-color: white; padding-top: 50px; }
 h1 { color: white}
 #container { background-color: white; }

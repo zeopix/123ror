@@ -1,11 +1,25 @@
-<section class="row" ng-if="sports">
+<section class="row" ng-show="sports">
   <div class="row">
-  <h1 class="h3 col-md-6"><a href="#">{{sport.title}} >> {{event.title}}</a></h1>
-  </div>
-  <div class="row">
+  <h1 class="h3 col-md-6"><span translate>outcomes</span> {{event.title}} </h1>
+  <small><a href="#/sports/{{sport.id}}" translate>back</a></small>
 
-    <a class="well col-sm-6" ng-repeat="event in sport.events" href="#/sports/{{sport.id}}/events/{{event.id}}">
-          <h4>{{outcome.description}}</h4>
-    </a>
   </div>
+  <div class="row" ng-hide="event.outcomes.length > 0">
+    <div class="text-center">
+    <h4 translate>no_outcomes</h4>
+    </div>
+  </div>
+  <div class="row" ng-show="event.outcomes.length > 0">
+
+    <div class="well col-sm-4" ng-repeat="outcome in event.outcomes">
+          <h4>{{outcome.description}}</h4>
+          <p class="price">{{outcome.price}} ({{outcome.price_decimal}})</p>
+    </div>
+  </div>
+</section>
+<section class="row" ng-hide="sports">
+<div class="text-center">
+    <h4 translate>no_sports</h4>
+    </h4>
+    </div>
 </section>

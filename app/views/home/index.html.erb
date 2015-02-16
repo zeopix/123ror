@@ -1,8 +1,8 @@
 <div ng-app="betvictor" id="container">
   <div id="spinner" ng-show="showSpinner">
-    <%= image_tag "loading.gif" %>
+    <a href="#/sports"><%= image_tag "loading.gif" %></a>
   </div>
-  <div class="view-container">
+  <div class="view-container" ng-hide="showSpinner">
     <div ng-view class="container view-frame animate-view"></div>
   </div>
 </div>

@@ -1,8 +1,15 @@
 <section class="row" ng-if="sports">
   <div class="row">
-  <h1 class="h3 col-md-6"><a href="#">{{sport.title}}</a></h1>
+  <h1 class="h3 col-md-6"><span translate>events</span> {{sport.title}} </h1>
+  <small><a href="#/sports" translate>back</a></small>
   </div>
-  <div class="row">
+  <div class="row" ng-hide="sport.events.length > 0">
+    <div class="text-center">
+    <h4 translate>no_events</h4>
+    </div>
+  </div>
+
+  <div class="row" ng-show="sport.events.length > 0">
 
     <a class="well col-sm-6" ng-repeat="event in sport.events" href="#/sports/{{sport.id}}/events/{{event.id}}">
           <h2>{{event.title}}</h2>

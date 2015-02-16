@@ -1,5 +1,11 @@
 en:
   sports: "Sports"
+  events: "Events for "
+  back: "Go Back"
+  outcomes: "Outcomes for "
+  no_outcomes: "No outcomes avaliable for this event."
+  no_events: "No events for this sport."
+  no_sports: "No sports avaliable now."
   locales:
     es: "Spanish"
     en: "English"

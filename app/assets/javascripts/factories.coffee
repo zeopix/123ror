@@ -1,13 +1,5 @@
 factories = angular.module('factories',[])
-factories.factory 'Sports', ($resource) ->
-  res = $resource 'sports/:id', { id: '@id' },
-    index:
-      method: 'GET'
-      isArray: true
-      responseType: 'json'
-      transformResponse: (data) ->
-        data.sports
-factories.factory 'myHttpInterceptor', [
+factories.factory 'spinnerHttpInterceptor', [
   '$q'
   '$rootScope'
   '$injector'
