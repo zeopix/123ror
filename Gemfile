@@ -39,8 +39,11 @@ group :test, :development do
   gem "database_cleaner"
   gem "selenium-webdriver"
   gem 'dotenv-rails'
+  gem 'teaspoon'
+  gem 'phantomjs'
 end
 gem 'angular-rails-templates'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
