@@ -1,5 +1,11 @@
-es:
+en:
   sports: "Deportes"
+  events: "Eventos para "
+  back: "Atrás"
+  outcomes: "Apuestas para "
+  no_outcomes: "No hay apuestas para este evento."
+  no_events: "No hay eventos en este deporte."
+  no_sports: "No hay deportes disponibles."
   locales:
     es: "Español"
     en: "Ingles"
